@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Call Screening Pro</title>
+    <meta name="description" content="Contact Call Screening Pro for support, questions, or feedback about our privacy-focused call screening app.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+        .contact-page {
+            padding: 120px 0 80px;
+            background: #f8fafc;
+        }
+        
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        
+        .contact-subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-info h2 {
+            color: #2563eb;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            background: #eff6ff;
+            transform: translateY(-2px);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-top: 2px;
+        }
+        
+        .contact-details h3 {
+            color: #1a1a1a;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p {
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        .contact-details a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-details a:hover {
+            color: #1d4ed8;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            color: #374151;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-button {
+            background: #2563eb;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .form-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .faq-section {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .faq-title {
+            color: #2563eb;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 20px;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            color: #1a1a1a;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .faq-answer {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        .response-time {
+            background: #eff6ff;
+            border: 2px solid #2563eb;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .response-time h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+        
+        .response-time p {
+            color: #4b5563;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">🛡️</div>
+                <span class="logo-text">Call Screening Pro</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#features" class="nav-link">Features</a>
+                <a href="../index.html#privacy" class="nav-link">Privacy</a>
+                <a href="../index.html#download" class="nav-link">Download</a>
+                <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Page Content -->
+    <section class="contact-page">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1 class="contact-title">Get in Touch</h1>
+                <p class="contact-subtitle">
+                    Have questions about Call Screening Pro? Need support or want to provide feedback? 
+                    We're here to help and would love to hear from you.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email Support</h3>
+                            <p><a href="mailto:support@callscreeningpro.com">support@callscreeningpro.com</a></p>
+                            <p>For general questions and technical support</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🔒</div>
+                        <div class="contact-details">
+                            <h3>Privacy Inquiries</h3>
+                            <p><a href="mailto:privacy@callscreeningpro.com">privacy@callscreeningpro.com</a></p>
+                            <p>Questions about our privacy practices</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">⚖️</div>
+                        <div class="contact-details">
+                            <h3>Legal Matters</h3>
+                            <p><a href="mailto:legal@callscreeningpro.com">legal@callscreeningpro.com</a></p>
+                            <p>Terms of service and legal questions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">💻</div>
+                        <div class="contact-details">
+                            <h3>GitHub Repository</h3>
+                            <p><a href="https://github.com/godmandevelopment/callscreeningpro" target="_blank">github.com/godmandevelopment/callscreeningpro</a></p>
+                            <p>Source code, issues, and contributions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="response-time">
+                        <h3>⏱️ Response Time</h3>
+                        <p>We typically respond to emails within 24-48 hours during business days.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category" class="form-label">Category</label>
+                            <select id="category" name="category" class="form-input">
+                                <option value="">Select a category</option>
+                                <option value="support">Technical Support</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="privacy">Privacy Question</option>
+                                <option value="feedback">General Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" required placeholder="Please describe your question or issue in detail..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="faq-section">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How does Call Screening Pro protect my privacy?</div>
+                    <div class="faq-answer">
+                        Call Screening Pro processes all call screening locally on your device. We don't collect, store, or transmit any personal data. Your phone numbers, call logs, and personal information never leave your device.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What Android versions are supported?</div>
+                    <div class="faq-answer">
+                        Call Screening Pro requires Android 10 (API level 29) or higher. This is because call screening functionality was introduced in Android 10. The app is optimized for maximum compatibility across supported devices.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Why might some calls not be blocked?</div>
+                    <div class="faq-answer">
+                        Call screening effectiveness can vary based on device capabilities, carrier configurations, and caller technology. Some sophisticated spam callers may use techniques that bypass standard blocking. We continuously improve our filtering algorithms.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I report a bug or request a feature?</div>
+                    <div class="faq-answer">
+                        You can report bugs or request features by emailing us at support@callscreeningpro.com or by creating an issue on our GitHub repository. Please include as much detail as possible about the issue or feature request.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is Call Screening Pro really free?</div>
+                    <div class="faq-answer">
+                        Yes, Call Screening Pro is completely free with no ads, no in-app purchases, and no premium features. We believe privacy protection should be accessible to everyone.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I contribute to the project?</div>
+                    <div class="faq-answer">
+                        We welcome contributions! Visit our GitHub repository to see how you can contribute code, report issues, or suggest improvements. We appreciate community involvement in making Call Screening Pro better.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">🛡️</div>
+                        <span class="logo-text">Call Screening Pro</span>
+                    </div>
+                    <p class="footer-description">
+                        Ultimate privacy protection for your Android device. Block unwanted calls with complete local processing.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Product</h4>
+                        <a href="../index.html#features" class="footer-link">Features</a>
+                        <a href="../index.html#privacy" class="footer-link">Privacy</a>
+                        <a href="../index.html#download" class="footer-link">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Legal</h4>
+                        <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                        <a href="terms.html" class="footer-link">Terms of Service</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Support</h4>
+                        <a href="contact.html" class="footer-link">Get Help</a>
+                        <a href="https://github.com/godmandevelopment/callscreeningpro" class="footer-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Call Screening Pro. All rights reserved.</p>
+                <p>Made with ❤️ for privacy protection</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Create mailto link
+            const subject = encodeURIComponent(data.subject);
+            const body = encodeURIComponent(
+                `Name: ${data.name}\n` +
+                `Email: ${data.email}\n` +
+                `Category: ${data.category || 'Not specified'}\n\n` +
+                `Message:\n${data.message}`
+            );
+            
+            const mailtoLink = `mailto:support@callscreeningpro.com?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show confirmation
+            alert('Your email client should open with the message pre-filled. If it doesn\'t open automatically, please email us directly at support@callscreeningpro.com');
+        });
+    </script>
+</body>
+</html>
+
