@@ -609,3 +609,13 @@ body {
     }
 }
 
+
+
+nav.scrolled {
+  background-color: #0078D7 !important;
+}
+
+nav.scrolled .logo-text,
+nav.scrolled a {
+  color: white !important;
+}
