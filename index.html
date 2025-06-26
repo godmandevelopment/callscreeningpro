@@ -15,12 +15,16 @@
                 <img src="images/shield-icon.svg" alt="Call Screening Pro" class="logo-icon">
                 <span class="logo-text">Call Screening Pro</span>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#privacy">Privacy</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
-            </ul>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#privacy">Privacy</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="pages/privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="pages/terms.html">Terms</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </nav>
 
@@ -66,65 +70,67 @@
             <div class="hero-phone">
                 <div class="phone-mockup">
                     <div class="phone-screen">
-                        <!-- Actual App Interface -->
-                        <div class="app-header">
-                            <div class="status-bar">
-                                <span class="time">9:11</span>
-                                <div class="status-icons">
-                                    <span class="signal">📶</span>
-                                    <span class="wifi">📶</span>
-                                    <span class="battery">🔋</span>
-                                </div>
-                            </div>
-                            <div class="app-title-bar">
-                                <h2 class="app-title">Call Screening Pro</h2>
-                                <span class="menu-icon">⋮</span>
+                        <!-- Status Bar -->
+                        <div class="status-bar">
+                            <span class="time">9:12</span>
+                            <div class="status-icons">
+                                <span>🔒</span>
+                                <span>📶</span>
+                                <span>📶</span>
+                                <span>🔋</span>
                             </div>
                         </div>
                         
+                        <!-- App Header -->
+                        <div class="app-header">
+                            <div class="app-title-bar">
+                                <span class="app-title">Call Screening Pro</span>
+                                <span class="menu-dots">⋮</span>
+                            </div>
+                        </div>
+                        
+                        <!-- App Content -->
                         <div class="app-content">
-                            <!-- App Status Banner -->
-                            <div class="status-banner active">
-                                <span class="status-text">Call Screening Active</span>
-                            </div>
-                            
-                            <div class="trial-banner">
-                                <span class="trial-text">Free Trial: 30 days remaining</span>
-                            </div>
-                            
                             <!-- Settings Section -->
                             <div class="settings-section">
                                 <h3 class="section-title">Settings</h3>
                                 <div class="setting-item">
-                                    <span class="setting-label">✅ Enable Call Screening</span>
+                                    <span class="checkbox checked">✓</span>
+                                    <span class="setting-label">Enable Call Screening</span>
                                 </div>
                                 <div class="setting-item">
-                                    <span class="setting-label">✅ Block Unknown/Private Numbers</span>
+                                    <span class="checkbox checked">✓</span>
+                                    <span class="setting-label">Block Unknown/Private Numbers</span>
                                 </div>
                                 <div class="setting-item">
-                                    <span class="setting-label">✅ Show Notifications for Blocked Calls</span>
+                                    <span class="checkbox checked">✓</span>
+                                    <span class="setting-label">Show Notifications for Blocked Calls</span>
                                 </div>
                                 <div class="setting-item">
-                                    <span class="setting-label">☐ Audible Alert for Blocked Calls</span>
+                                    <span class="checkbox unchecked">☐</span>
+                                    <span class="setting-label">Audible Alert for Blocked Calls</span>
                                 </div>
                                 <div class="setting-item">
-                                    <span class="setting-label">✅ Vibrate on Blocked Calls</span>
+                                    <span class="checkbox checked">✓</span>
+                                    <span class="setting-label">Vibrate on Blocked Calls</span>
                                 </div>
                                 <div class="setting-item">
-                                    <span class="setting-label">☐ Block Without Voicemail</span>
+                                    <span class="checkbox unchecked">☐</span>
+                                    <span class="setting-label">Block Without Voicemail</span>
                                 </div>
-                                <div class="setting-item">
-                                    <span class="setting-label">✅ Block Numbers Not in Contacts</span>
+                                <div class="setting-item featured-setting">
+                                    <span class="checkbox checked">✓</span>
+                                    <span class="setting-label">Block Numbers Not in Contacts</span>
                                 </div>
                             </div>
                             
                             <!-- Manage Lists Section -->
                             <div class="manage-section">
                                 <h3 class="section-title">Manage Lists</h3>
-                                <button class="manage-btn blacklist">MANAGE BLACKLIST</button>
-                                <button class="manage-btn whitelist">MANAGE WHITELIST</button>
-                                <button class="manage-btn advanced">ADVANCED FILTERING</button>
-                                <button class="manage-btn history">VIEW BLOCKED CALL HISTORY</button>
+                                <button class="manage-btn blue">MANAGE BLACKLIST</button>
+                                <button class="manage-btn blue">MANAGE WHITELIST</button>
+                                <button class="manage-btn orange">ADVANCED FILTERING</button>
+                                <button class="manage-btn blue">VIEW BLOCKED CALL HISTORY</button>
                             </div>
                         </div>
                     </div>
@@ -209,7 +215,7 @@
                 <h2>Block Unknown Callers Today</h2>
                 <p><strong>Only your contacts can reach you.</strong> Download Call Screening Pro and eliminate spam calls, robocalls, and unknown interruptions instantly.</p>
                 <div class="download-buttons">
-                    <a href="https://play.google.com/store/apps/details?id=com.callscreeningpro.app" class="download-btn google-play">
+                    <a href="https://play.google.com/store/apps/details?id=com.godmandevelopment.callscreeningpro" class="download-btn google-play">
                         <img src="images/google-play-badge.png" alt="Get it on Google Play">
                     </a>
                 </div>
