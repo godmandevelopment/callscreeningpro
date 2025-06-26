@@ -52,20 +52,20 @@ body {
     margin-right: 10px;
 }
 
-.nav-menu {
+.nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-.nav-menu a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.3s ease;
 }
 
-.nav-menu a:hover {
+.nav-links a:hover {
     opacity: 0.8;
 }
 
@@ -444,6 +444,40 @@ body {
 
 .download-buttons {
     margin-bottom: 2rem;
+}
+
+.google-play-btn {
+    display: inline-block;
+    background: #000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+}
+
+.google-play-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.play-btn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.play-btn-text-small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 2px;
+}
+
+.play-btn-text-large {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .download-btn img {
