@@ -26,6 +26,7 @@ body {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(33, 150, 243, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
@@ -43,6 +44,7 @@ body {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .logo-icon {
@@ -67,11 +69,51 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
 .nav-links a:hover {
-    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation Theme Classes - Light theme for white backgrounds */
+.navbar.navbar-light {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar.navbar-light .nav-logo {
+    color: #333333 !important;
+}
+
+.navbar.navbar-light .nav-links a {
+    color: #333333 !important;
+}
+
+.navbar.navbar-light .nav-links a:hover {
+    color: #000000 !important;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation Theme Classes - Dark theme for blue backgrounds */
+.navbar.navbar-dark {
+    background: rgba(33, 150, 243, 0.9) !important;
+    box-shadow: 0 2px 10px rgba(33, 150, 243, 0.3);
+}
+
+.navbar.navbar-dark .nav-logo {
+    color: #ffffff !important;
+}
+
+.navbar.navbar-dark .nav-links a {
+    color: #ffffff !important;
+}
+
+.navbar.navbar-dark .nav-links a:hover {
+    color: #f0f0f0 !important;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Hero Section */
@@ -607,58 +649,14 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
+    
+    /* Mobile navigation theme adjustments */
+    .navbar.navbar-light {
+        background: rgba(255, 255, 255, 0.98) !important;
+    }
+    
+    .navbar.navbar-dark {
+        background: rgba(33, 150, 243, 0.95) !important;
+    }
 }
 
-
-
-  background-color: #0078D7 !important;
-}
-
-  color: white !important;
-}
-
-
-/* Scroll fix for sticky header */
-  background-color: #0078D7 !important;
-  transition: background-color 0.3s ease;
-}
-
-  color: white !important;
-}
-
-
-/* Scroll fix for sticky header with logo visibility */
-  background-color: #0078D7 !important;
-  transition: background-color 0.3s ease;
-}
-
-  color: white !important;
-  filter: brightness(100%);
-}
-
-
-/* Sticky header styling on scroll */
-.navbar.scrolled {
-  background-color: #0078D7 !important;
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled .logo-icon,
-.navbar.scrolled .logo-text,
-.navbar.scrolled a {
-  color: white !important;
-  filter: brightness(100%);
-}
-
-/* Scroll styling targeting .navbar */
-.navbar.scrolled {
-  background-color: #0078D7 !important;
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled .logo-icon,
-.navbar.scrolled .logo-text,
-.navbar.scrolled a {
-  color: white !important;
-  filter: brightness(100%);
-}
