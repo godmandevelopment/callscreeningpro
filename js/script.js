@@ -32,23 +32,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Navbar scroll effect
+    // Enhanced Navbar scroll effect with theme switching
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
     
-    window.addEventListener('scroll', function() {
+    // Configuration for theme switching
+    const config = {
+        scrollThreshold: 600, // Adjust this value based on your hero section height
+        debounceDelay: 10
+    };
+    
+    // Debounce function for performance
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // Function to update navigation theme based on scroll position
+    function updateNavigationTheme() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        if (scrollTop > config.scrollThreshold) {
+            // User has scrolled past the blue hero section - use light theme
+            navbar.classList.remove('navbar-dark');
+            navbar.classList.add('navbar-light');
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
+            // User is in the blue hero section - use dark theme
+            navbar.classList.remove('navbar-light');
+            navbar.classList.add('navbar-dark');
         }
         
         lastScrollTop = scrollTop;
-    });
+    }
+    
+    // Initialize with correct theme
+    updateNavigationTheme();
+    
+    // Add scroll event listener with debouncing
+    const debouncedUpdate = debounce(updateNavigationTheme, config.debounceDelay);
+    window.addEventListener('scroll', debouncedUpdate, { passive: true });
+    
+    // Also update on resize (in case viewport changes)
+    window.addEventListener('resize', debounce(updateNavigationTheme, 100), { passive: true });
     
     // Animate elements on scroll
     const observerOptions = {
@@ -149,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
             heroDescription.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
             heroDescription.style.opacity = '1';
             heroDescription.style.transform = 'translateY(0)';
-        }, 400);
+        }, 600);
     }
     
     if (heroButtons) {
@@ -206,6 +238,28 @@ document.addEventListener('DOMContentLoaded', function() {
         
         requestAnimationFrame(updateCounter);
     }
+    
+    // Expose navigation fix configuration for easy adjustment
+    window.navigationFix = {
+        updateThreshold: function(newThreshold) {
+            config.scrollThreshold = newThreshold;
+            updateNavigationTheme();
+        },
+        getCurrentTheme: function() {
+            return navbar.classList.contains('navbar-light') ? 'light' : 'dark';
+        },
+        forceTheme: function(theme) {
+            if (theme === 'light') {
+                navbar.classList.remove('navbar-dark');
+                navbar.classList.add('navbar-light');
+            } else if (theme === 'dark') {
+                navbar.classList.remove('navbar-light');
+                navbar.classList.add('navbar-dark');
+            }
+        }
+    };
+    
+    console.log('Navigation visibility fix initialized successfully');
 });
 
 // Add CSS for mobile menu
