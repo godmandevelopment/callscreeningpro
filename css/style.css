@@ -660,3 +660,10 @@ body {
     }
 }
 
+
+/* Consistent navigation across the site */
+.nav-links { gap: .45rem; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+.nav-links a { display: inline-block; padding: 8px 9px; }
+.nav-links a[aria-current="page"], .nav-menu a[aria-current="page"] { text-decoration: underline; text-underline-offset: 5px; }
+@media (min-width: 769px) { .nav-menu { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; } .nav-menu .nav-link { margin: 0; } }
+@media (max-width: 768px) { .nav-links { justify-content: center; flex-direction: row; gap: 3px; } .nav-links a { font-size: .86rem; padding: 6px 8px; } }
